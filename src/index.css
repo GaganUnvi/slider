@@ -1,0 +1,238 @@
+.App {
+  background-color: #2d343c;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.nodisplay {
+  background-image: './images/load.gif';
+  text-align: center;
+  background-color: #cccccc;
+  background-color: #2d343c;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  animation: spin 2s linear infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+  }
+}
+.mySlides {
+  margin-top: 5%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 80%;
+  height: 80%;
+}
+
+.App-header {
+  background-color: #282c34;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 80%;
+  height: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.imagebox {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 100px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.author {
+  color: #00baff;
+  font-size: 50px;
+  position: absolute;
+  font-style: italic;
+  top: 40%;
+  left: 20%;
+  width: 100%;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+.content {
+  color: #eff5d4;
+  font-size: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  left: 50%;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.6s ease;
+}
+.dot-fade {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #717171;
+  border-radius: 50%;
+  left: 50%;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.6s ease;
+}
+
+.quote {
+  position: absolute;
+  color: #f2f2f2;
+  opacity: 1;
+  text-align: center;
+  font-size: 30px;
+  top: 30%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.loading {
+  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+  animation: sk-scaleout 1s infinite ease-in-out;
+  background-color: black;
+  border-radius: 100%;
+  height: 6em;
+  width: 6em;
+}
+
+.container {
+  align-items: center;
+  background-color: #61dafb;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
